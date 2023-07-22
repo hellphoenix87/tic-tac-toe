@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Board from './Board';
 import Status from './Status';
+import '../styles/Game.css';
 
 const Game = () => {
   const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
@@ -50,7 +51,7 @@ const Game = () => {
       <div className="game-info">
         <Status winner={winner} isXNext={isXNext} />
         <div className="game-moves">
-          <ol>{renderMoves()}</ol>
+          <ol className='moves'>{renderMoves()}</ol>
         </div>
       </div>
     </div>
